@@ -2,7 +2,7 @@
  * Sesion 01: "Hola mundo".c
  *
  * En esta primera sesión hemos tomado nuestro primer contacto con C,
- * escribiendo el típico "Hola mundo" en este lenguaje:
+ * escribiendo el típico "Hola mundo":
  */
 
 #include <stdio.h>
@@ -29,15 +29,18 @@ int main(){
  * Puedes cambiarlo pasándole el argumento '-o' al gcc seguido del nombre
  * que quieras para tu programa ejecutable:
  * $ gcc -o hola hola.c
- * De esta manera se generará un fichero "hola" que podrás ejectuar directamnte:
+ * De esta manera se generará un fichero "hola" que podrás ejectuar directamente:
  * $ ./hola
  *
  * Lo que en realidad está ocurriendo son tres pasos:
+ *
  * 0.- Antes que nada se 'preprocesa': gcc -E hola.c
  *     Lo que hace es 'empotrar' el código de las librerías (include, define...)
+ *
  * 1.- Seguidamente, se 'compila': gcc -c hola.c
  *     Esto genera un fichero objeto 'hola.o', el cual contiene sólo el código
  *     máquina de mi programa (sin las librerias)
+ *
  * 2.- Y después se 'linkea': gcc -o hola hola.o
  *     Esto lo que hace es añadir al fichero objeto el código máquina de las
  *     librerías, generando el ejecutable
