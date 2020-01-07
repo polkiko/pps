@@ -29,11 +29,17 @@ int main(int argc, char *argv[]){
 
   /**
    * Para imprimir mensajes por pantalla utilizamos la funcion fprintf(), a la
-   * que le podemos añadir en el primer argumento la salida que queramos,
-   * siendo stderr la salida de error.
+   * que le podemos añadir en el primer argumento la salida que queramos.
+   *
+   * stdout = salida estandar       stderr = salida de error
+   * fprintf(stderr, "El error es el numero %d\n", numero);
+   *
    * Las variables se escriben después de nuestro mensaje separadas por coma, y
    * se van rellenando en el lugar donde hemos puesto %X, siendo X un caracter
-   * el cual dependerá del tipo de valor a mostrar (En la siguiente sesión)
+   * el cual dependerá del tipo de valor a mostrar (En la siguiente sesión).
+   *
+   * La función printf("Un numero %d\n", numero); - sin la f primera -
+   * es equivalente a utilizar fprintf(stdout, "Un numero %d\n", numero);
    */
 
   if(n == 0){ // (1)
