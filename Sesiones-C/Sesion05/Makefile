@@ -1,6 +1,8 @@
-generador_lcg.o: generador_lcg.h generador_lcg.c
+CFLAGS =-Wall -g
 
-lcg3.o: lcg3.c generador_lcg.h
+sesion05_lcg3: sesion05_lcg3.o generador_lcg.o
+	$(CC) $(CFLAGS) -o $@ $^
 
-lcg3: lcg3.o generador_lcg.o
-	gcc -o $@ $^
+	generador_lcg.o: generador_lcg.c generador_lcg.h
+
+	sesion05_lcg3.o: sesion05_lcg3.c generador_lcg.h
