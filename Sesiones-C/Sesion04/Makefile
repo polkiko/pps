@@ -1,12 +1,11 @@
-EJECUTABLES=basicos pruebasize
-CFLAGS =-ansi -Wall -Werror -pedantic -o
+CFLAGS =--Wall -g
 
-default: basicos pruebasize
+lcg1: lcg1.o
+	$(CC) $(CFLAGS) -o lcg1 lcg1.c
 
-%: %.c
-	gcc $(CFLAGS) $@ $<
+lcg2: lcg1.o generador_lcg.o
+	$(CC) $(CFLAGS) -o $@ $^
 
-clean:
-	rm -f $(EJECUTABLES)
+generador_lcg.o: generador_lcg.c generador_lcg.h
 
-.PHONY: default clean
+lcg2.o: lcg2.c generador_lcg.h
